@@ -12,7 +12,7 @@ if [ -z "$TEST_MOCHA_NAME" ]; then
 	export TEST_MOCHA_NAME=testapi-generic
 fi
 
-#docker build --no-cache -t $TEST_MOCHA_NAME .
+docker build --no-cache -t $TEST_MOCHA_NAME .
 
 TITLE="Define Env Variable for Docker image and add a global run command"
 
