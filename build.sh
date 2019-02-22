@@ -14,7 +14,7 @@ fi
 
 docker build --no-cache -t $TEST_MOCHA_NAME .
 
-TITLE="Define Env Variable for Docker image and add a global run command"
+TITLE="Define Env Variable for API TEST Docker image and add a global run command"
 
 installAlias() {
   local f="$1"

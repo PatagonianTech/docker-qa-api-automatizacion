@@ -1,9 +1,9 @@
-FROM node:slim
+FROM node:6.12.2-slim
 
 RUN mkdir -p /app/context
 WORKDIR /app
 
-ADD app/* /app/
+ADD app/* /app/	
 
 RUN npm install
 

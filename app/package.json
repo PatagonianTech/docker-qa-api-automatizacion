@@ -9,17 +9,24 @@
   },
   "dependencies": {
     "body-parser": "^1.16.0",
-    "chai": "^3.5.0",
+    "chai": "^4.1.2",
     "cheerio": "^0.22.0",
-    "config": "^1.25.1",
+    "co": "^4.6.0",
+    "lodash": "^4.17.4",
+    "colors": "^1.1.2",
+    "config": "^1.27.0",
     "express": "^4.14.1",
     "md5": "^2.2.1",
-    "mocha": "^3.2.0",
-    "mochawesome": "^2.0.2",
-    "mochawesome-report-generator": "^1.0.6",
-    "supertest": "^3.0.0"
+    "mocha": "^4.0.1",
+    "mochawesome": "^2.3.1",
+    "mochawesome-report-generator": "^2.3.1",
+    "supertest": "^3.0.0",
+    "co-supertest": ""
   },
   "scripts": {
-    "start": "mocha test/test.js"
+    "start": "mocha test.js"
+  },
+  "devDependencies": {
+    "repeat-it": "^1.3.0"
   }
 }
