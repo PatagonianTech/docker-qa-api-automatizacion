@@ -15,18 +15,16 @@ var datos = config.get('Datos');
 var api = supertest(datos.api_url);
 var md5 = require('md5');
 
-
-describe('TEST APIREST', function() {
+describe('TEST APIREST', function () {
 
   beforeEach(function(done) {
     console.log('---------------------------------------');
     done();
   });
 
-  it('POST /XXX/xxxx - TestCase', function(done) {
-
-      this.timeout(10 * 1000);
-      api.post('/XXX/xxxx')
+  it('POST /XXX/xxxx - TestCase', function (done) {
+    this.timeout(10 * 1000);
+    api.post('/XXX/xxxx')
       .set('clientToken', clientToken)
       .send({
         parametro1: valor1,
@@ -40,16 +38,16 @@ describe('TEST APIREST', function() {
       });
   });
 
-  it('GET xxxx - TestCase', function(done) {
-    this.timeout(10 * 1000);    
+  it('GET xxxx - TestCase', function (done) {
+    this.timeout(10 * 1000);
     api.get('/xxxx')
-    .set('clientToken', clientToken)
-    .query({parametro1:'value1', parametro2: value2})
-    .expect(200)
-    .end(function (err, res) {
+      .set('clientToken', clientToken)
+      .query({parametro1:'value1', parametro2: value2})
+      .expect(200)
+      .end(function (err, res) {
         res.status.should.be.equal(200);
-      done();
-    });
+        done();
+      });
   });
 
 });

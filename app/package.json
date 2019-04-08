@@ -1,7 +1,7 @@
 {
-  "name": "Automation",
+  "name": "automation",
   "description": "API Testing",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "PatagonianTech",
   "engines": {
     "node": "0.12.x",
@@ -21,7 +21,7 @@
     "mochawesome": "^2.3.1",
     "mochawesome-report-generator": "^2.3.1",
     "supertest": "^3.0.0",
-    "co-supertest": ""
+    "co-supertest": "0.0.10"
   },
   "scripts": {
     "start": "mocha test.js"
