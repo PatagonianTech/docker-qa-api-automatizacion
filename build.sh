@@ -1,19 +1,5 @@
 #!/bin/bash
 
-# Ex 1:
-# $ export TEST_MOCHA_NAME=test1
-# $ ./build.sh
-
-# Ex 2:
-# $ TEST_MOCHA_NAME=test1 ./build.sh
-
-
-if [ -z "$TEST_MOCHA_NAME" ]; then
-	export TEST_MOCHA_NAME=testapi-generic
-fi
-
-docker build -t $TEST_MOCHA_NAME .
-
 TITLE="Define Env Variable for API TEST Docker image and add a global run command"
 
 installAlias() {
@@ -23,8 +9,7 @@ installAlias() {
       then
         echo '' >> "$f"
         echo "# ${TITLE}" >> "$f"
-        echo "export TEST_MOCHA_NAME='$TEST_MOCHA_NAME'" >> "$f"
-        echo "alias 'run-test-api'='docker run -it --rm --net=host -v \"\$(pwd):/app/context\" -e HOST_USER=\$UID -e HOST_GROUP=\$(id -g \$USERNAME) -e REPNAME=\"\${REPNAME:-Name}\" -e REPTITLE=\"\${REPTITLE:-Title}\" \$TEST_MOCHA_NAME --'" >> "$f"
+        echo "alias 'run-test-api'='docker run -it --rm --net=host -v \"\$(pwd):/app/context\" -e HOST_USER=\$UID -e HOST_GROUP=\$(id -g \$USERNAME) -e REPNAME=\"\${REPNAME:-Name}\" -e REPTITLE=\"\${REPTITLE:-Title}\" patagoniansys/qa-api-automatizacion:latest --'" >> "$f"
         echo '' >> "$f"
       fi
   fi
