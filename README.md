@@ -13,7 +13,8 @@ Run next:
 ./build.sh
 ```
 
-## define ENV variables for report customise
+## Define ENV variables for report customise
+
 ```bash
 EXPORT REPNAME='report-file-name'
 EXPORT REPTITLE='report-tile'
@@ -26,7 +27,9 @@ cd your/test/script/app
 
 run-test-api script-name.js
 ```
+
 ## Report
 
-Under your/test/script/app/report you'll find an HTML with report name define in ENV REPNAME
+Under `your/test/script/app/report` you'll find an HTML with report name define in _ENV REPNAME_
+
 The service doesn't overwrite older reports.
